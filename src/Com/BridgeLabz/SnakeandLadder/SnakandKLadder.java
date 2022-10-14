@@ -11,34 +11,39 @@ public class SnakandKLadder{
 
 		System.out.println("Welcome to the Snake and ladder program ");
 		System.out.println("Starting Position of the Single Player is : "+startingPosition);
-		Random ran = new Random();
-		int dice = ran.nextInt(6)+1;
-		System.out.println("dice: "+dice);
+		while(startingPosition<100) {
+			Random ran = new Random();
+			int dice = ran.nextInt(6)+1;
+			System.out.println("dice: "+dice);
 
-		int optionCheck = ran.nextInt(3);
-		System.out.println("optionCheck: "+optionCheck);
-		
-		
+			int optionCheck = ran.nextInt(3);
+			System.out.println("optionCheck: "+optionCheck);
 
-		if (optionCheck == LADDER) {
-			System.out.println("ladder!!!");
-			startingPosition = startingPosition + dice;
+
+
+			if (optionCheck == LADDER) {
+				System.out.println("ladder!!!");
+				startingPosition = startingPosition + dice;
+			}
+
+
+			else if (optionCheck == SNAKE && startingPosition > dice) {
+				System.out.println("snake!!!");
+				startingPosition = startingPosition - dice;
+			}
+
+
+			else {
+				System.out.println("noPlay!!!");
+				startingPosition = startingPosition;
+			}
+			if(startingPosition<0) {
+				startingPosition=0;
+			}
+
+
+			System.out.println("position: "+startingPosition);
 		}
-		
-		
-		else if (optionCheck == SNAKE && startingPosition > dice) {
-			System.out.println("snake!!!");
-			startingPosition = startingPosition - dice;
-		}
-		
-		
-		else {
-			System.out.println("noPlay!!!");
-			startingPosition = startingPosition;
-		}
-		
-		
-		System.out.println("position: "+startingPosition);
 	}
 }
 
