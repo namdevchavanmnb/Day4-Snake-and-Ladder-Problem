@@ -6,12 +6,13 @@ public class SnakandKLadder{
 	static final int NO_PLAY = 0;
 	static final int LADDER = 1;
 	static final int SNAKE = 2;
+	static int DICECOUNT = 0;
 	public static void main(String[] args) {
-		
-		
+
+
 		int startingPosition = 0;
 
-		
+
 		System.out.println("Starting Position of the Single Player is : "+startingPosition);
 		while(startingPosition<100) {
 			Random ran = new Random();
