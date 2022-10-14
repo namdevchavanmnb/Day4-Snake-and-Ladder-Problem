@@ -7,9 +7,11 @@ public class SnakandKLadder{
 	static final int LADDER = 1;
 	static final int SNAKE = 2;
 	public static void main(String[] args) {
+		
+		
 		int startingPosition = 0;
 
-		System.out.println("Welcome to the Snake and ladder program ");
+		
 		System.out.println("Starting Position of the Single Player is : "+startingPosition);
 		while(startingPosition<100) {
 			Random ran = new Random();
